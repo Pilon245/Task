@@ -1,0 +1,27 @@
+#include <iostream>
+#include "Math.h"
+#include <cmath>  
+
+using namespace std;
+
+int main() {
+	int S;
+	int P;
+	int x=0,y=0,z=0;
+	
+	
+	cout<<"Vvedite summu";
+	cin>>S;
+	cout<<"Vvedite proizvedenie";
+	cin>>P;
+	
+	x*(S-x)==P;
+	x*x+x*S==P;
+	((x*S)*(x*S))-4*(x*x)==z;
+	x=(-((x*S)*(x*S))+sqrt(z))/2*(x*x);
+	y=S-x;
+	cout<<x<<y;
+	
+	return 0;
+	getchar();
+}
