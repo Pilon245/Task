@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+
+double math(int a,int i){
+	vector<int> arr;
+	int sum=0;
+	for(i=0;i<12345;i++){//������ ����������� ����� �� ���� ���������
+	cin>>a;
+	if(a!=0){          // ���� �������� ����� �� ����� 0, �� ���� ������
+		arr.push_back((int)a);//��������� ����� �� ������������ � ����� �������
+		sum += arr[i];
+	}
+	else if(a==0){
+		return sum/i; // ���� ������������ ������ 0,���� ������������� � ���������� ��. ����. �����
+	}
+}
+}
+
+int main(){
+	int a=0;
+	int i=0;
+	cout<<math(a,i);
+}
+
+
+//int math(int a,int i){
+//	while(true){
+//		int sum=0;
+//		cin>>a;
+//		if(a!=0){
+//		sum += a;
+//	}
+//	else if(a==0){
+//		return sum/i;
+//	}
+//	
+//	}
+//}
+
+
+//int math(int a,int i){
+//	int mas[123456];
+//	int sum=0;
+//	for(i=0;i<123456;i++){
+//	cin>>a;
+//	if(a!=0){
+//		mas[i]=a;
+//		sum += mas[i];
+//	}
+//	else if(a==0){
+//		return sum/i;
+//	}
+//}
+//}
+	
+	
+//	mas[10];
+//	int a;
+//	int sum=0;
+//	for( int i=0; i<10; i++){
+//		cin<<a;
+//		mas[i]=a;
+//		sum += mas[i];
+//	}
+//	return sum/10;
+
+
+
+
