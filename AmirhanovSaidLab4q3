@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+enum day{Mon, Tue, Wed, Thr, Fri, Sat, Sun};
+
+int temp(int str,int (&mas)[7]){
+		switch(str){
+			case(Mon):
+				cout<<"Today: "<<mas[0];
+				break;
+			case(Tue):
+				cout<<"Today: "<<mas[1];
+				break;
+			case(Wed):
+				cout<<"Today: "<<mas[2];
+				break;
+			case(Thr):
+				cout<<"Today: "<<mas[3];
+				break;
+			case(Fri):
+				cout<<"Today: "<<mas[4];
+				break;
+			case(Sat):
+				cout<<"Today: "<<mas[5];
+				break;
+			case(Sun):
+				cout<<"Today: "<<mas[6];
+				break;
+		}	
+}
+
+
+int main(){
+	int a;
+	int mas[7];
+	day floor = Mon;
+	int str = floor;//������� ���� �� �������� � ����� ������ string 
+	cout<<"Enter weather:"<<endl;
+	for(int i=0;i<7;i++){
+	cin>>a;
+	mas[i]=a;
+	}
+	cout<<"Enter day:"<<endl;
+	cin>>str;
+	temp(str,mas);
+}
+
+
+
+
