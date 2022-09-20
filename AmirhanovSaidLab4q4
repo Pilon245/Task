@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int fit(int (&mas)[2][7]){
+	int arr[1][7];
+	int sum=0;
+		for(int j=0;j<7;j++){
+		arr[0][j]=mas[0][j]-mas[1][j];
+		sum += arr[0][j];
+	}
+	if(sum>0){
+		cout<<"You typed "<<sum<<" calories";
+	}else{
+	cout<<"You sweating "<<sum<<" calories";
+}
+}
+
+
+int main(){
+	int a;
+	int mas[2][7];
+	cout<<"Enter received calories on weekend:"<<endl;
+	for(int i=0;i<7;i++){
+		cin>>a;
+		mas[0][i]=a;
+	}
+	cout<<"Enter spent calories on weekend:"<<endl;
+	for(int i=0;i<7;i++){
+		cin>>a;
+		mas[1][i]=a;
+	}
+	fit(mas);
+ 
+}
+
+
+
+
