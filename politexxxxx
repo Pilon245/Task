@@ -1,0 +1,103 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+struct Student {
+  int id;
+  int mark[3];
+  void hi(){
+  cout << "Hello: " << id<< endl;
+  }
+   int bal(){
+   	int sum=0;
+   	for(int i=0;i<3;i++){
+   		sum += mark[i];
+   		 }
+   	return sum;
+   }
+   void money(int bal){
+    int four=0;
+   	int five=0;
+   	four = 70 - bal;
+   	four = four * 100;
+	five = 85 - bal; 
+	five = five * 150;
+   	cout<<"To get " << 70 << " To pay "<< four << " rub "<<endl;
+   	cout<<"To get " << 85 << " To pay "<< five << " rub "<<endl;
+
+   };
+  
+};
+struct Group{
+	int id;
+	Student studs[2];
+	
+};
+
+struct Faculty{
+	int id;
+	Group Y[2];
+};
+
+struct Univer{
+	string street;
+	Faculty PC [1];
+};
+
+int main (){
+    Student said;
+    said.id=1;
+    said.hi();
+    
+    cout<<"Enter attestaci:"<<endl;
+
+	for(int i=0;i<3;i++)
+    cin >> said.mark[i];
+    cout<<endl<<"Bal: "<<said.bal()<<endl;
+    said.money(said.bal());
+
+    Student omar;
+    omar.id=2;
+    omar.hi();
+    
+	
+	cout<<"Enter attestaci:"<<endl;
+
+	for(int i=0;i<3;i++)
+    cin >> omar.mark[i];
+    cout<<endl<<"Bal: "<<omar.bal()<<endl;
+    omar.money(omar.bal());
+    
+
+    Group Y951;
+    Y951.id=10;
+    
+    Group Y936;
+    Student maga{3};
+    maga.hi();
+    
+    cout<<"Enter attestaci:"<<endl;
+
+	for(int i=0;i<3;i++)
+    cin >> maga.mark[i];
+    cout<<endl<<"Bal: "<<maga.bal()<<endl;
+    maga.money(maga.bal());
+    
+    
+    Student ali{4};
+    ali.hi();
+    
+    cout<<"Enter attestaci:"<<endl;
+
+	for(int i=0;i<3;i++)
+    cin >> ali.mark[i];
+    cout<<endl<<"Bal: "<<ali.bal()<<endl;
+    ali.money(ali.bal());
+    
+    Faculty ktvt;
+    ktvt.id=100;
+    Univer dgtu;
+    dgtu.street = "Kalinina 30";
+    cout<<dgtu.street;
+
+}
